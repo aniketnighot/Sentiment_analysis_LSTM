@@ -1,0 +1,18 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Classifier</title>
+</head>
+<body>
+    <h2>Enter a Movie Review:</h2>
+    <form method="post">
+        <textarea name="review" rows="5" cols="60" placeholder="Type review here..." required></textarea><br><br>
+        <button type="submit">Predict Sentiment</button>
+    </form>
+    {% if prediction %}
+    <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
